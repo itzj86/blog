@@ -3,7 +3,8 @@
     <!-- slides -->
     <swiper-slide style="background:#00800005;">
       <div style="text-align:center;height:100%;display:flex;justify-content:center;align-items: center;flex-direction:column;">
-        <h1 style="color:rgb(1, 110, 74);">来自一个程序员，一个不一样的生活自述</h1>
+        <h1 style="color:rgb(1, 110, 74);">来自一个程序员</h1>
+        <h1 style="color:rgb(1, 110, 74);">一个不一样的生活自述</h1>
         <h1 style="color:rgb(1, 110, 74);">website:https://blog.scmall.cc</h1>
       </div>
     </swiper-slide>
@@ -15,7 +16,8 @@
           <Icon type="logo-python" />
           <Icon type="logo-javascript" />
         </h1>
-        <h1 style="color:rgb(104, 89, 3);">可以给我发邮件，进行项目外包洽谈</h1>
+        <h1 style="color:rgb(104, 89, 3);">可以给我发邮件</h1>
+        <h1 style="color:rgb(104, 89, 3);">进行项目外包洽谈</h1>
         <h1 style="color:rgb(104, 89, 3);">
           <Icon type="ios-at-outline" /> : 87538812@qq.com</h1>
       </div>

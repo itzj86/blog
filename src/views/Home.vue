@@ -16,7 +16,7 @@ export default {
     return {
       style:{
         height:this.docHeight+'px'
-      }
+      },
     }
   },
   components: {
