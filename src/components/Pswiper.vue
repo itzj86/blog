@@ -5,7 +5,7 @@
       <div style="text-align:center;height:100%;display:flex;justify-content:center;align-items: center;flex-direction:column;">
         <h1 style="color:rgb(1, 110, 74);">来自一个程序员</h1>
         <h1 style="color:rgb(1, 110, 74);">一个不一样的生活自述</h1>
-        <h1 style="color:rgb(1, 110, 74);">https://blog.scmall.cc</h1>
+        <h1 style="color:rgb(1, 110, 74);">https://www.zhoujun.vip</h1>
       </div>
     </swiper-slide>
     <swiper-slide style="background:#0000ff17;">
