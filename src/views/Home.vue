@@ -26,7 +26,6 @@ export default {
     this.style={
       height:(document.documentElement.clientHeight-60)+'px'
     }
-    
   },
   mounted(){
     console.log(this.docHeight)
