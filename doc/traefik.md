@@ -84,11 +84,11 @@ tcp:
             loadBalancer:
                 servers:
                     - address: "127.0.0.1:3306"
-                    - address: "119.3.195.7:3306"
+                    - address: "*.*.*.*:3306"
         mysql2:
             loadBalancer:
                 servers:
-                    - address: "119.3.195.7:3306"
+                    - address: "*.*.*.*:3306"
     # app:
     #     weighted:
     #         services:
