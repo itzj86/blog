@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  traefik:
+    restart: always
+    image: traefik:v2.1.4
+    command: --api.insecure=true --providers.docker --providers.docker.exposedbydefault=false --entrypoints.web.address=:80
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "9088:80"
+      - "9090:8080"
+    networks:
+      - traefik
+  nginx:
+    image: nginx
+    #hostname: ng.kub.xsztn.cn
+    networks:
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.nginx.rule=Host(`ng.kub.xsztn.cn`)"
+      - "traefik.http.routers.nginx.entrypoints=web"
+      - "traefik.http.services.nginx.loadbalancer.server.port=80"
+      - "traefik.docker.network=traefik"
+  gitlab:
+    # image: gitlab/gitlab-ce
+    image: gitlab-ce=11.9.4-ce.0
+    hostname: git.kub.xsztn.cn
+    #environment:
+     # GITLAB_OMNIBUS_CONFIG: |
+     #   external_url 'http://git.kub.xsztn.cn'
+    volumes:
+      - /data0/gitlab_traefik/etc:/etc/gitlab
+      - /data0/gitlab_traefik/opt:/var/opt/gitlab
+      - /data0/gitlab_traefik/log:/var/log/gitlab
+    labels:
+      - "traefik.enable=true"
+      # GitLab Web 服务
+      - "traefik.http.routers.gitlab.rule=Host(`git.kub.xsztn.cn`)"
+      - "traefik.http.routers.gitlab.entrypoints=web"
+      - "traefik.http.services.gitlab.loadbalancer.server.port=80"
+      - "traefik.docker.network=traefik"
+    #restart: always
+    networks:
+      - traefik
+networks:
+  traefik:
+    external: true
