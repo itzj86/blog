@@ -7,7 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "aws-sdk": "^2.457.0",
+    "aws-sdk": "^2.814.0",
     "iview": "^3.3.0",
     "vue": "^2.6.6",
     "vue-awesome-swiper": "^3.1.3",
